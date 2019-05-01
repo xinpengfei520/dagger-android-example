@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.xpf.dagger.R;
 import com.xpf.dagger.di.DaggerInjectActivity;
+import com.xpf.dagger.main.fragment.MainFragment;
 
 import javax.inject.Inject;
 
@@ -43,6 +44,11 @@ public class MainActivity extends AppCompatActivity implements HasSupportFragmen
     public void onLoaded() {
         textView = findViewById(R.id.textView);
         button = findViewById(R.id.button);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.frameLayout, MainFragment.newInstance())
+                .commitAllowingStateLoss();
 
         textView.postDelayed(new Runnable() {
             @Override

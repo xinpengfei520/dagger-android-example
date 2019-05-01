@@ -2,6 +2,7 @@ package com.xpf.dagger.main;
 
 import com.xpf.dagger.api.ApiService;
 import com.xpf.dagger.main.fragment.MainFragmentComponent;
+import com.xpf.dagger.main.fragment.MainFragmentProvider;
 
 import dagger.Module;
 import dagger.Provides;

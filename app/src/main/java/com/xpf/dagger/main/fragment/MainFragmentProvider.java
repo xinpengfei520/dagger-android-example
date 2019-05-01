@@ -1,7 +1,4 @@
-package com.xpf.dagger.main;
-
-import com.xpf.dagger.main.fragment.MainFragment;
-import com.xpf.dagger.main.fragment.MainFragmentComponent;
+package com.xpf.dagger.main.fragment;
 
 import dagger.Binds;
 import dagger.Module;
@@ -20,5 +17,8 @@ public abstract class MainFragmentProvider {
     @IntoMap
     @ClassKey(MainFragment.class)
     abstract AndroidInjector.Factory<?> bindMainFragmentInjectorFactory(MainFragmentComponent.Factory factory);
+
+//    @ContributesAndroidInjector(modules = MainFragmentModule.class)
+//    abstract MainFragment provideMainFragmentFactory();
 
 }

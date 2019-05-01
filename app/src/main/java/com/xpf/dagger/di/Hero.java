@@ -1,6 +1,8 @@
 package com.xpf.dagger.di;
 
+import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import javax.inject.Inject;
 
@@ -31,7 +33,8 @@ public class Hero {
         this.pants = pants;
     }
 
-    void printDefense() {
+    void printDefense(Context context) {
         Log.i(TAG, "您的角色拥有防御值为，衣服：" + clothes.defense + "，裤子：" + pants.defense);
+        Toast.makeText(context.getApplicationContext(), "您的角色拥有防御值为，衣服：" + clothes.defense + "，裤子：" + pants.defense, Toast.LENGTH_LONG).show();
     }
 }

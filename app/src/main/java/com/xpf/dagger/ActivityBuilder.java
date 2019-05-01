@@ -20,4 +20,10 @@ public abstract class ActivityBuilder {
     @IntoMap
     @ClassKey(MainActivity.class)
     abstract AndroidInjector.Factory<?> bindMainActivity(MainActivityComponent.Factory factory);
+
+//    @ContributesAndroidInjector(modules = MainActivityModule.class)
+//    abstract MainActivity bindMainActivity();
+//
+//    @ContributesAndroidInjector(modules = {MainActivityModule.class, MainFragmentProvider.class})
+//    abstract MainActivity bindMainActivity();
 }
